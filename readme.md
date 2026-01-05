@@ -45,6 +45,9 @@ node index.js
 
 **Saída esperada:**
 > o guerreiro atacou usando espada
+
 > o mago atacou usando magia
+
 > o monge atacou usando artes marciais
+
 > o ninja atacou usando shuriken
