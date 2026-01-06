@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hero Adventure Dashboard</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f4c025",
+                        "primary-dark": "#b88e14",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#221e10",
+                        "card-dark": "#2e291b",
+                        "card-hover": "#363020",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #221e10; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3a3322; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f4c025; 
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased min-h-screen flex flex-col selection:bg-primary selection:text-background-dark">
+<div class="relative flex flex-col grow w-full overflow-x-hidden">
+<header class="w-full px-6 py-10 md:py-16 flex flex-col items-center justify-center text-center border-b border-white/5 bg-gradient-to-b from-transparent to-black/20">
+<div class="max-w-4xl w-full animate-fade-in-up">
+<div class="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold tracking-wider uppercase">
+<span class="material-symbols-outlined text-sm">stadia_controller</span>
+<span>RPG Dashboard</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-black tracking-tight text-white mb-4">
+                    Hero <span class="text-primary">Adventure</span>
+</h1>
+<p class="text-[#cbbc90] text-lg md:text-xl font-normal max-w-2xl mx-auto leading-relaxed">
+                    Sistema de Combate de Heróis
+                </p>
+</div>
+</header>
+<main class="flex-grow w-full max-w-[1280px] mx-auto px-6 py-12 flex flex-col gap-12">
+<section>
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-2xl font-bold text-white flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">groups</span>
+                        Selecione seu Herói
+                    </h2>
+<div class="hidden sm:flex text-sm text-[#cbbc90]/60">
+                        4 Heróis disponíveis
+                    </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+<article class="group relative flex flex-col bg-card-dark rounded-xl overflow-hidden border border-white/5 shadow-lg transition-all duration-300 hover:shadow-primary/10 hover:border-primary/30 hover:-translate-y-1">
+<div class="relative h-48 w-full overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-card-dark to-transparent z-10"></div>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Medieval warrior armor and sword background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC9h3mPNNqxDXPtd-ZVEV9-bSxNmRMiZMjIWcaGyUFAXx3VpaHyyJ3-qLkN5AMWtHeCLAsHfsp640yGKV_pOSIbtkjhC9_vdBrT20zKDhA4gwGF8nPNNia8aST7CAVjE1v1aPsAmB08RFxqrw7UnBuhIt_hNLq5BtuMJSw2Fx-qBhaenT2pPuYHQw9WnpbQ5D8dCNtf7eqKF59tcXjggtlcko7-e3Z3GnjehY_1Z-3Qi2MimF8Uo12JkpvM1LWDD2NdpfusIIVWIXot");'>
+</div>
+<div class="absolute top-3 right-3 z-20 bg-black/60 backdrop-blur-md rounded-lg p-2 text-primary border border-white/10">
+<span class="material-symbols-outlined block">shield</span>
+</div>
+</div>
+<div class="flex flex-col flex-grow p-5 pt-2 gap-4">
+<div>
+<h3 class="text-2xl font-bold text-white leading-tight mb-1">Arthus</h3>
+<p class="text-[#cbbc90] text-sm font-medium uppercase tracking-wide">Guerreiro</p>
+</div>
+<div class="mt-auto pt-4 border-t border-white/5">
+<button class="w-full cursor-pointer flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-primary hover:bg-primary-dark active:scale-95 transition-all text-background-dark text-sm font-bold uppercase tracking-wide shadow-[0_0_15px_rgba(244,192,37,0.2)]">
+<span class="material-symbols-outlined text-lg">swords</span>
+<span>Atacar</span>
+</button>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col bg-card-dark rounded-xl overflow-hidden border border-white/5 shadow-lg transition-all duration-300 hover:shadow-primary/10 hover:border-primary/30 hover:-translate-y-1">
+<div class="relative h-48 w-full overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-card-dark to-transparent z-10"></div>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Mystical ancient spellbook and magical aura" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAqmO3pdbq7yht-9YMCMTL19kFGXfZiSaNWkdBGEDV5EAwjNYroHbKXv48tOT5iRmtjBaiT0iRTPM_lPTgo1RSWY4y7ylcN_6JFEpoinWsr_Cz4_k9fZzClAM2R5lcNzRykP20MwToWRWgi7TG3Svhf3qFIPBIAp4XH4sqbu5-k0Szv7tMhlFrjOWxHR410N0qVBdHLkfYSSjCrsgFRcjnyxZglz-nd_KIx053yfQ4Q0tVjPxJKSAMPNGnK_gE1YblNiKwJRFXM88wh");'>
+</div>
+<div class="absolute top-3 right-3 z-20 bg-black/60 backdrop-blur-md rounded-lg p-2 text-primary border border-white/10">
+<span class="material-symbols-outlined block">auto_fix_high</span>
+</div>
+</div>
+<div class="flex flex-col flex-grow p-5 pt-2 gap-4">
+<div>
+<h3 class="text-2xl font-bold text-white leading-tight mb-1">Merlin</h3>
+<p class="text-[#cbbc90] text-sm font-medium uppercase tracking-wide">Mago</p>
+</div>
+<div class="mt-auto pt-4 border-t border-white/5">
+<button class="w-full cursor-pointer flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-primary hover:bg-primary-dark active:scale-95 transition-all text-background-dark text-sm font-bold uppercase tracking-wide shadow-[0_0_15px_rgba(244,192,37,0.2)]">
+<span class="material-symbols-outlined text-lg">swords</span>
+<span>Atacar</span>
+</button>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col bg-card-dark rounded-xl overflow-hidden border border-white/5 shadow-lg transition-all duration-300 hover:shadow-primary/10 hover:border-primary/30 hover:-translate-y-1">
+<div class="relative h-48 w-full overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-card-dark to-transparent z-10"></div>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Zen garden and martial arts temple vibes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDMy8O7USaPu8lyBdWOmuR9LB7SMOuoUsavhLaLP1dUfNCOoqxfb5jHBWq0347h2aSetNO_qbRrHQ8Td_6OfFi56gTOdUI-O-muomnFI3Ai7FHHEvvb_jjclL9PTZT-su1QtKdfEEn9m2azg-VYwzjbn9XByatOm0sdvoxMTEzCL6sFq2lM-NwiU72wWKQLVY1H_DjYmN2TFhabt6Vsirpc5zCz1zCVHHCa0ynfadhtyoAhUQzpKvljCWQC7tsKypt0f0SJh2NgOn9z");'>
+</div>
+<div class="absolute top-3 right-3 z-20 bg-black/60 backdrop-blur-md rounded-lg p-2 text-primary border border-white/10">
+<span class="material-symbols-outlined block">sports_martial_arts</span>
+</div>
+</div>
+<div class="flex flex-col flex-grow p-5 pt-2 gap-4">
+<div>
+<h3 class="text-2xl font-bold text-white leading-tight mb-1">Lee</h3>
+<p class="text-[#cbbc90] text-sm font-medium uppercase tracking-wide">Monge</p>
+</div>
+<div class="mt-auto pt-4 border-t border-white/5">
+<button class="w-full cursor-pointer flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-primary hover:bg-primary-dark active:scale-95 transition-all text-background-dark text-sm font-bold uppercase tracking-wide shadow-[0_0_15px_rgba(244,192,37,0.2)]">
+<span class="material-symbols-outlined text-lg">swords</span>
+<span>Atacar</span>
+</button>
+</div>
+</div>
+</article>
+<article class="group relative flex flex-col bg-card-dark rounded-xl overflow-hidden border border-white/5 shadow-lg transition-all duration-300 hover:shadow-primary/10 hover:border-primary/30 hover:-translate-y-1">
+<div class="relative h-48 w-full overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-card-dark to-transparent z-10"></div>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Shadowy ninja silhouette in moonlight" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBI_qpyTny1DwRSbfnT-cj-XvR4Ld_gtn8cmnqRchWkSJE2HtYlmRmMd17V5gE0fBqmxDhO_bTLotuWJU9NED90ow5v9UQjiyquN9V2Et0Wkj0HgntSu3OGmGOBGoAAyFii5Ltw0E6p02JLeMclYSMJiMh4aawBQOZzXJ588bQyK1tc3Kb99q4Q3xpCUwk27Z82uQdMNvxz5qZ1_0sBBqlYjwLeubI849wA1jzGxgpWLcUfRH3aYVPYeZmhzHPHHQosIq_08Y1COUyv");'>
+</div>
+<div class="absolute top-3 right-3 z-20 bg-black/60 backdrop-blur-md rounded-lg p-2 text-primary border border-white/10">
+<span class="material-symbols-outlined block">star</span>
+</div>
+</div>
+<div class="flex flex-col flex-grow p-5 pt-2 gap-4">
+<div>
+<h3 class="text-2xl font-bold text-white leading-tight mb-1">Hanzo</h3>
+<p class="text-[#cbbc90] text-sm font-medium uppercase tracking-wide">Ninja</p>
+</div>
+<div class="mt-auto pt-4 border-t border-white/5">
+<button class="w-full cursor-pointer flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-primary hover:bg-primary-dark active:scale-95 transition-all text-background-dark text-sm font-bold uppercase tracking-wide shadow-[0_0_15px_rgba(244,192,37,0.2)]">
+<span class="material-symbols-outlined text-lg">swords</span>
+<span>Atacar</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</section>
+<section class="bg-[#1a160b] border border-white/5 rounded-xl p-6 md:p-8 shadow-2xl relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-9xl">terminal</span>
+</div>
+<div class="flex items-center gap-3 mb-6 pb-4 border-b border-white/10 relative z-10">
+<div class="p-2 bg-primary/10 rounded-lg">
+<span class="material-symbols-outlined text-primary">terminal</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-white">Registro de Combate</h3>
+<p class="text-xs text-[#cbbc90]/60 font-mono mt-0.5">Live Log v2.4.0</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 font-mono text-sm relative z-10">
+<div class="flex items-start gap-3 text-[#cbbc90] opacity-50 pl-2">
+<span class="text-xs mt-1 font-bold">[10:41:22]</span>
+<p>Iniciando sistema de combate...</p>
+</div>
+<div class="flex items-start gap-3 text-[#cbbc90] opacity-70 pl-2">
+<span class="text-xs mt-1 font-bold">[10:42:05]</span>
+<p>Carregando perfis de heróis: <span class="text-white">Arthus, Merlin, Lee, Hanzo</span>.</p>
+</div>
+<div class="flex items-start gap-3 p-3 rounded bg-white/5 border-l-2 border-primary/40 hover:bg-white/10 transition-colors">
+<span class="text-xs mt-1 text-primary/70 font-bold">[10:42:15]</span>
+<p class="text-white">O <span class="text-primary font-bold">Mago</span> atacou usando <span class="text-primary font-bold">magia</span></p>
+</div>
+<div class="flex items-start gap-3 p-3 rounded bg-white/5 border-l-2 border-primary/40 hover:bg-white/10 transition-colors">
+<span class="text-xs mt-1 text-primary/70 font-bold">[10:42:30]</span>
+<p class="text-white">O <span class="text-primary font-bold">Guerreiro</span> atacou usando <span class="text-primary font-bold">espada</span></p>
+</div>
+<div class="flex items-start gap-3 p-3 rounded bg-white/5 border-l-2 border-primary/40 hover:bg-white/10 transition-colors">
+<span class="text-xs mt-1 text-primary/70 font-bold">[10:42:48]</span>
+<p class="text-white">O <span class="text-primary font-bold">Monge</span> atacou usando <span class="text-primary font-bold">artes marciais</span></p>
+</div>
+<div class="flex items-start gap-3 p-3 rounded bg-white/5 border-l-2 border-primary/40 hover:bg-white/10 transition-colors">
+<span class="text-xs mt-1 text-primary/70 font-bold">[10:43:05]</span>
+<p class="text-white">O <span class="text-primary font-bold">Ninja</span> atacou usando <span class="text-primary font-bold">shuriken</span></p>
+</div>
+<div class="flex items-center gap-2 text-primary/50 mt-2 pl-2 border-t border-white/5 pt-3">
+<span class="material-symbols-outlined text-sm animate-pulse">keyboard_arrow_right</span>
+<span class="animate-pulse">Aguardando próximo turno...</span>
+</div>
+</div>
+</section>
+</main>
+<footer class="w-full py-8 text-center border-t border-white/5 bg-[#1a160b]">
+<div class="px-6 flex flex-col gap-2 items-center justify-center">
+<div class="w-8 h-1 bg-primary/20 rounded-full mb-4"></div>
+<p class="text-[#cbbc90] text-sm font-medium opacity-60">
+                    Projeto acadêmico – Programação Orientada a Objetos
+                </p>
+<p class="text-[#cbbc90]/40 text-xs">
+                    © 2023 Hero Adventure System
+                </p>
+</div>
+</footer>
+</div>
+
+</body></html>
